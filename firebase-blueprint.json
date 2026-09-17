@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "userProfile": {
+      "title": "UserProfile",
+      "description": "Executive user profile for Uncle Robert Consulting LLC and Agent Lab",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "Authorized executive email address"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Display name of the executive"
+        },
+        "role": {
+          "type": "string",
+          "description": "Assigned executive role",
+          "enum": ["executive"]
+        },
+        "organization": {
+          "type": "string",
+          "description": "Organization affiliation"
+        },
+        "lastLogin": {
+          "type": "string",
+          "description": "ISO timestamp of last login"
+        }
+      },
+      "required": ["email", "role"]
+    }
+  },
+  "firestore": {
+    "/executive_profiles/{userId}": {
+      "schema": "userProfile",
+      "description": "Stores executive profile and last sign-in metadata"
+    }
+  }
+}

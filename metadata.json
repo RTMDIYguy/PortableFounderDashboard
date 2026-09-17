@@ -1,0 +1,8 @@
+{
+  "name": "Portable Founder Dashboard",
+  "description": "A versatile interactive dashboard supporting diverse chart visualizations, multi-metric aggregations, dynamic filtering, and custom data importing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
